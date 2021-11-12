@@ -1,0 +1,25 @@
+name: Run tests
+
+on: [push, pull_request]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: azure/setup-helm@v1
+        with:
+          version: "3.7.1"
+
+      - name: Download Pluto
+        uses: FairwindsOps/pluto/github-action@master
+
+      - name: Use pluto for v1 (pass)
+        run: |
+          helm template charts/v1 | pluto detect -
+
+      - name: Use pluto for v1beta1 (fail)
+        run: |
+          helm template charts/v1beta1 | pluto detect -

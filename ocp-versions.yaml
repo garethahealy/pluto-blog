@@ -1,0 +1,10 @@
+# https://docs.openshift.com/container-platform/4.9/release_notes/ocp-4-9-release-notes.html#ocp-4-9-deprecated-removed-features
+deprecated-versions:
+  - version: v1
+    kind: DeploymentConfig
+    deprecated-in: v3.11.0
+    removed-in: v4.9.0
+    replacement-api: apps.openshift.io/v1
+    component: ocp
+target-versions:
+  ocp: v4.9.0

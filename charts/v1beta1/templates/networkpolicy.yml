@@ -1,0 +1,9 @@
+apiVersion: extensions/v1beta1
+kind: NetworkPolicy
+metadata:
+  name: web-deny-all
+spec:
+  podSelector:
+    matchLabels:
+      app: web
+  ingress: []
