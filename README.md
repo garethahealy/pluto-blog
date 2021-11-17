@@ -30,7 +30,7 @@ If you've been using k8s/OCP for a while, it should be easy to imagine the follo
 
 > You have multiple teams with multiple applications on the platform. Some of those applications
 > use an auxiliary service, such as MongoDB, which is provided by another team or external partner via a helm chart.
-> A web of YAML dependencies has inadvertently been created. Do you know what `apiVersion` the `Deployment` of MongoDB uses?
+> A spiders web of YAML dependencies has inadvertently been created. Do you know what `apiVersion` the `Deployment` of MongoDB uses?
 
 Of course not, your concern should be the business value created by your application.
 But that MongoDB service is within the remit of your team to run which means it is down to your team to fix and mitigate any issues.
